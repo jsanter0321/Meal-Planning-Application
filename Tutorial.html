@@ -4,17 +4,40 @@
         <title>
             Meal Planning Application
         </title>
+        <link rel = "StyleSheet" href = "style.css">
     </head>
 
     <body>
+        <script> alert("Scroll around the screen to learn about the different features")</script>
+
         <header>
-            <h1>Tutorial</h1>
+            <h1> Home Tutorial</h1>
         </header>
-        <h2>Home</h2>
+
         <nav>
-            <a href = "Pantry.html">Pantry</a> | <a href = "MealPlan.html"> Meal Plan </a> | <a href = "Recipes.html"> Recipes</a>
+            <a id = "pantry">Pantry</a> | <a id = "mealPlan" href = "MealPlan.html"> Meal Plan </a> | <a href = "Recipes.html"> Recipes</a>
         </nav>
 
+        <div id = "pantryDescription" style = "display: none">
+                    Here is your pantry. This is where you will update what you currently have to work with. A recipe will be reccommended
+                    based on the first thing you put in your pantry. Because of this, it is very important to update this frequently.
+        </div>
+
+        <script>
+            var pantryhelp = document.getElementById("pantry");
+            pantryhelp.onmouseover = function(){
+                document.getElementById("pantryDescription").style.display = "inline";
+            } 
+            pantryhelp.onmouseout = function(){
+                document.getElementById("pantryDescription").style.display = "none";
+            }
+
+            var mealPlanHelp = document.getElementById("mealPlan")
+
+            mealPlanHelp.onmouseover = function(){
+                window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+        </script>
         <p> 
             This will look similar to the Home page except will include arrows. 
             When you highlight the arrows a text box will pop up that will explain the different hyperlinks and arrows.

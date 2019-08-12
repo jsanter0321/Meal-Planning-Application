@@ -5,15 +5,25 @@
         <title>
             Meal Planning Application
         </title>
+        <link rel = "StyleSheet" href = "style.css">
     </head>
 
     <body>
         <h1> Welcome to Meal Planning</h1>
         <hr>
         <h2>Please Login</h2>
-        <p>Username: </p>
-        <p>Password: </p>
-        <a href = "Home.html"> Login</a>
+        <script>
+            function clickedButton(){
+                window.location = "Home.html"
+            }
+        </script>
+        <form name="login_form" method = "post">
+            <input type="text" name="username" id="username" placeholder = "Username"/>
+            <br>
+            <input type="password" name="password" id="password" placeholder = "Password" />
+            <br>
+            <input type = "button" value = "Login" onclick="clickedButton()"/>
+        </form>
         <br>
         <a href = "Registration.html">New User? Click here</a>
     </body>
